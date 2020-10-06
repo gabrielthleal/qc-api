@@ -27,9 +27,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # ActiveModelSerializers brings convention over configuration to your JSON generation
 gem 'active_model_serializers', '~> 0.10.0'
-
 # Generate pretty API docs for your Rails APIs.
 gem 'rspec_api_documentation'
+# Add pagination
+gem 'kaminari'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
