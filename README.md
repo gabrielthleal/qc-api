@@ -20,6 +20,8 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 5. Populate questions: `$ bin/rake populate:questions`
 6. Populate question_access (will take a some time): `$ bin/rake populate:question_access`
 
+## Documentaion 
+
 ## Tests
 To run them just type: `$ bundle exec rspec`
 
