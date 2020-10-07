@@ -1,0 +1,68 @@
+{
+  "resource": "Questions",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/questions",
+  "description": "[GET] Listing questions - 200",
+  "explanation": null,
+  "parameters": [
+    {
+      "default": "1",
+      "name": "page",
+      "description": "Question page"
+    },
+    {
+      "default": "10",
+      "name": "per_page",
+      "description": "Questions per page"
+    },
+    {
+      "name": "by_week",
+      "description": "Just pass the date (year-month-day) as number xxxx-xx-xx "
+    },
+    {
+      "name": "by_month",
+      "description": "Just pass the year and month (year-month) as number xxxx-xx"
+    },
+    {
+      "name": "by_year",
+      "description": "Just pass the year (year) as number xxxx"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/questions",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 907,\n    \"statement\": \"Exercitationem cupiditate sit minima.\",\n    \"text\": \"Ducimus vel deleniti. Rerum exercitationem dolorem. Molestiae molestias sapiente.\",\n    \"answer\": \"C\",\n    \"daily_access\": 536,\n    \"discipline\": \"Biological Science 484\",\n    \"created_at\": \"2020-10-07T17:17:42.196Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.196Z\"\n  },\n  {\n    \"id\": 908,\n    \"statement\": \"Dicta voluptates quaerat voluptatem.\",\n    \"text\": \"Molestiae quibusdam ex. Deleniti voluptate ratione. At officia a.\",\n    \"answer\": \"D\",\n    \"daily_access\": 155,\n    \"discipline\": \"Law 362\",\n    \"created_at\": \"2020-10-07T17:17:42.241Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.241Z\"\n  },\n  {\n    \"id\": 909,\n    \"statement\": \"Quis et esse aut.\",\n    \"text\": \"Vitae magnam distinctio. Natus dolorem illo. Veniam accusamus et.\",\n    \"answer\": \"C\",\n    \"daily_access\": 445,\n    \"discipline\": \"Biomedical Science 237\",\n    \"created_at\": \"2020-10-07T17:17:42.252Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.252Z\"\n  },\n  {\n    \"id\": 910,\n    \"statement\": \"Est minima quod earum.\",\n    \"text\": \"Voluptate accusantium expedita. Rerum iure omnis. Veniam magni qui.\",\n    \"answer\": \"A\",\n    \"daily_access\": 344,\n    \"discipline\": \"Health Science 380\",\n    \"created_at\": \"2020-10-07T17:17:42.259Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.259Z\"\n  },\n  {\n    \"id\": 911,\n    \"statement\": \"Optio et tempore ut.\",\n    \"text\": \"Quibusdam vel vero. Et quod sit. Quaerat consequatur et.\",\n    \"answer\": \"D\",\n    \"daily_access\": 829,\n    \"discipline\": \"Design 553\",\n    \"created_at\": \"2020-10-07T17:17:42.267Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.267Z\"\n  },\n  {\n    \"id\": 912,\n    \"statement\": \"Sit sed exercitationem sed.\",\n    \"text\": \"Vero est sit. Tempore consequuntur quo. Fugit quae veniam.\",\n    \"answer\": \"A\",\n    \"daily_access\": 516,\n    \"discipline\": \"Nursing 172\",\n    \"created_at\": \"2020-10-07T17:17:42.275Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.275Z\"\n  },\n  {\n    \"id\": 913,\n    \"statement\": \"Fuga quia magni eius.\",\n    \"text\": \"Asperiores doloremque vel. Qui id voluptatem. Praesentium id libero.\",\n    \"answer\": \"D\",\n    \"daily_access\": 107,\n    \"discipline\": \"Communications 184\",\n    \"created_at\": \"2020-10-07T17:17:42.283Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.283Z\"\n  },\n  {\n    \"id\": 914,\n    \"statement\": \"Quia rem qui facilis.\",\n    \"text\": \"Laborum perspiciatis molestiae. In autem et. Inventore debitis incidunt.\",\n    \"answer\": \"A\",\n    \"daily_access\": 590,\n    \"discipline\": \"Applied Science (Psychology) 218\",\n    \"created_at\": \"2020-10-07T17:17:42.291Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.291Z\"\n  },\n  {\n    \"id\": 915,\n    \"statement\": \"Sunt sed molestiae maiores.\",\n    \"text\": \"Et est quis. Est accusantium repudiandae. Nam ex aut.\",\n    \"answer\": \"B\",\n    \"daily_access\": 404,\n    \"discipline\": \"Law 461\",\n    \"created_at\": \"2020-10-07T17:17:42.301Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.301Z\"\n  },\n  {\n    \"id\": 916,\n    \"statement\": \"Sint necessitatibus perferendis laborum.\",\n    \"text\": \"Libero officia sunt. Incidunt natus quia. Aut officiis sequi.\",\n    \"answer\": \"E\",\n    \"daily_access\": 376,\n    \"discipline\": \"Biological Science 173\",\n    \"created_at\": \"2020-10-07T17:17:42.309Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.309Z\"\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"5263dae8e1a3747bacb15b5f40aec690\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "01b9f5ec-d11a-4a11-9aa5-82f941af1371",
+        "X-Runtime": "0.021807",
+        "Content-Length": "2724"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

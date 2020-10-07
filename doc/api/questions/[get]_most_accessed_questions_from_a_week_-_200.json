@@ -1,0 +1,69 @@
+{
+  "resource": "Questions",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/v1/questions",
+  "description": "[GET] most accessed questions from a week - 200",
+  "explanation": null,
+  "parameters": [
+    {
+      "default": "1",
+      "name": "page",
+      "description": "Question page"
+    },
+    {
+      "default": "10",
+      "name": "per_page",
+      "description": "Questions per page"
+    },
+    {
+      "name": "by_week",
+      "description": "Just pass the date (year-month-day) as number xxxx-xx-xx "
+    },
+    {
+      "name": "by_month",
+      "description": "Just pass the year and month (year-month) as number xxxx-xx"
+    },
+    {
+      "name": "by_year",
+      "description": "Just pass the year (year) as number xxxx"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/questions?by_week=2020-10-07",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "by_week": "2020-10-07"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 919,\n    \"statement\": \"Natus reprehenderit consequatur ullam.\",\n    \"text\": \"Temporibus nam rem. Distinctio doloremque non. Quibusdam debitis quae.\",\n    \"answer\": \"A\",\n    \"daily_access\": 594,\n    \"discipline\": \"Biological Science 355\",\n    \"created_at\": \"2020-10-07T17:17:42.380Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.380Z\"\n  },\n  {\n    \"id\": 920,\n    \"statement\": \"Qui accusantium corrupti sit.\",\n    \"text\": \"Dolore corporis eius. Est non natus. Voluptatem vitae ut.\",\n    \"answer\": \"B\",\n    \"daily_access\": 784,\n    \"discipline\": \"Psychology 346\",\n    \"created_at\": \"2020-10-07T17:17:42.388Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.388Z\"\n  },\n  {\n    \"id\": 918,\n    \"statement\": \"Similique ea eum iusto.\",\n    \"text\": \"Aliquid animi in. Ipsum ea quam. Ullam sit perferendis.\",\n    \"answer\": \"A\",\n    \"daily_access\": 883,\n    \"discipline\": \"Communications 118\",\n    \"created_at\": \"2020-10-07T17:17:42.372Z\",\n    \"updated_at\": \"2020-10-07T17:17:42.372Z\"\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"989c44f915f9355734c7fd61ef4430dc\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "fccdc955-dd59-4679-9f53-bc551fa5446e",
+        "X-Runtime": "0.014255",
+        "Content-Length": "819"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

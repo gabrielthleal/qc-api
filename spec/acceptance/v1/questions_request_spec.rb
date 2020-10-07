@@ -6,14 +6,21 @@ resource 'Questions' do
   get '/v1/questions' do
     parameter :page, 'Question page', default: '1'
     parameter :per_page, 'Questions per page', default: '10'
-    parameter :by_week, 'Just pass the date like year-month-day'
-    parameter :by_month, 'Just pass the year and month as number xxxx-xx'
-    parameter :by_year, 'Just pass the year as number xxxx'
+    parameter :by_week, 'Just pass the date (year-month-day) as number xxxx-xx-xx '
+    parameter :by_month, 'Just pass the year and month (year-month) as number xxxx-xx'
+    parameter :by_year, 'Just pass the year (year) as number xxxx'
 
-    example '[GET] Listing questions - 200' do
-      do_request
+    context 'List all questios with pagination' do
+      before { create_list(:question, 11, :with_access) }
 
-      expect(status).to eq 200
+      example '[GET] Listing questions - 200' do
+        do_request
+
+        body = JSON(response_body)
+
+        expect(body.size).to eq 10
+        expect(status).to eq 200
+      end
     end
 
     describe 'Question Filters' do

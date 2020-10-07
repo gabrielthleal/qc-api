@@ -1,0 +1,45 @@
+{
+  "resources": [
+    {
+      "name": "Questions",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "[GET] Listing questions - 200",
+          "link": "questions/[get]_listing_questions_-_200.json",
+          "groups": "all",
+          "route": "/v1/questions",
+          "method": "get"
+        },
+        {
+          "description": "[GET] Most accessed disciplines - 200",
+          "link": "questions/[get]_most_accessed_disciplines_-_200.json",
+          "groups": "all",
+          "route": "/v1/disciplines",
+          "method": "get"
+        },
+        {
+          "description": "[GET] most accessed questions a from year - 200",
+          "link": "questions/[get]_most_accessed_questions_a_from_year_-_200.json",
+          "groups": "all",
+          "route": "/v1/questions",
+          "method": "get"
+        },
+        {
+          "description": "[GET] most accessed questions from a month - 200",
+          "link": "questions/[get]_most_accessed_questions_from_a_month_-_200.json",
+          "groups": "all",
+          "route": "/v1/questions",
+          "method": "get"
+        },
+        {
+          "description": "[GET] most accessed questions from a week - 200",
+          "link": "questions/[get]_most_accessed_questions_from_a_week_-_200.json",
+          "groups": "all",
+          "route": "/v1/questions",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

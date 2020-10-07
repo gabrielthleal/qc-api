@@ -31,6 +31,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'rspec_api_documentation'
 # Add pagination
 gem 'kaminari'
+# Apitome is a API documentation tool for Rails
+gem 'apitome', github: 'jejacks0n/apitome'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
