@@ -48,11 +48,19 @@ resource 'Questions' do
     parameter :per_page, 'Disciplines per page', default: '10'
 
     describe 'most accessed disciplines' do
+      before do
+        create_list(:question_access, 3)
+        create_list(:question_access, 3, date: Date.today - 1)
+      end
+
       context 'when return the most accessed disciplines' do
         example '[GET] Most accessed disciplines - 200' do
           do_request
 
+          body = JSON(response_body)
+
           expect(status).to eq 200
+          expect(body.size).to eq 3
         end
       end
     end

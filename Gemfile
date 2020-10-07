@@ -37,6 +37,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # rspec test framework to rails
   gem 'rspec-rails', '~> 4.0.1'
+  # factory to database models
+  gem 'factory_bot_rails'
+  # generates fake data.
+  gem 'faker'
 end
 
 group :development do

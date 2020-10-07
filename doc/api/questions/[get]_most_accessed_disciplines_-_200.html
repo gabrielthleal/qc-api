@@ -109,8 +109,8 @@ table th, table td {
       <h1>Questions API</h1>
 
       <div class="article">
-        <h2>[GET] hottest disciplines - 200</h2>
-        <h3>GET /v1/questions</h3>
+        <h2>[GET] Most accessed disciplines - 200</h2>
+        <h3>GET /v1/disciplines</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -126,7 +126,7 @@ table th, table td {
                     <span class="name">page</span>
                 </td>
                 <td>
-                  <span class="description">Question page</span>
+                  <span class="description">Discipline page</span>
                 </td>
               </tr>
               <tr>
@@ -134,39 +134,7 @@ table th, table td {
                     <span class="name">per_page</span>
                 </td>
                 <td>
-                  <span class="description">Questions per page</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">disciplines</span>
-                </td>
-                <td>
-                  <span class="description">Hottest diciplines by access</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">week</span>
-                </td>
-                <td>
-                  <span class="description">Hottest questions from week by access</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">month</span>
-                </td>
-                <td>
-                  <span class="description">Hottest questions from month by access</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <span class="name">year</span>
-                </td>
-                <td>
-                  <span class="description">Hottest questions from year by access</span>
+                  <span class="description">Disciplines per page</span>
                 </td>
               </tr>
             </tbody>
@@ -180,10 +148,8 @@ table th, table td {
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /v1/questions?params=discipline</pre>
+          <pre class="request route highlight">GET /v1/disciplines</pre>
 
-            <h4>Query Parameters</h4>
-            <pre class="request query_parameters highlight">params: discipline</pre>
 
 
 
@@ -196,11 +162,11 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5&quot;
+ETag: W/&quot;7c4adcc72f403b10d88b024276e360f2&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: e5f8d0da-a6d2-4a69-a400-6052731537d1
-X-Runtime: 0.004828
-Content-Length: 2</pre>
+X-Request-Id: 82f9713f-5bd3-4608-a327-f773284d6507
+X-Runtime: 0.013102
+Content-Length: 51</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
