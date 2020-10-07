@@ -20,8 +20,10 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 5. Populate questions: `$ bin/rake populate:questions`
 6. Populate question_access (will take a some time): `$ bin/rake populate:question_access`
 
-## Documentaion 
+## Documentaion
+ The API ducumentations is generated automaticaly when run the specs, you can check this doc out on: http://localhost:3000/api/docs
 
 ## Tests
 To run them just type: `$ bundle exec rspec`
+To generate the api documentation `$ rake docs:generate`
 
