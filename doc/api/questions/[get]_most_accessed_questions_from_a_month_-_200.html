@@ -109,7 +109,7 @@ table th, table td {
       <h1>Questions API</h1>
 
       <div class="article">
-        <h2>[GET] hottest questions from week - 200</h2>
+        <h2>[GET] most accessed questions from a month - 200</h2>
         <h3>GET /v1/questions</h3>
 
           <h3>Parameters</h3>
@@ -139,18 +139,18 @@ table th, table td {
               </tr>
               <tr>
                 <td>
-                    <span class="name">week</span>
+                    <span class="name">by_week</span>
                 </td>
                 <td>
-                  <span class="description">Hottest questions from week by accesses</span>
+                  <span class="description">Just pass the date like year-month-day</span>
                 </td>
               </tr>
               <tr>
                 <td>
-                    <span class="name">month</span>
+                    <span class="name">by_month</span>
                 </td>
                 <td>
-                  <span class="description">Hottest questions from month by accesses</span>
+                  <span class="description">Just pass the date like year-month-day</span>
                 </td>
               </tr>
               <tr>
@@ -158,7 +158,7 @@ table th, table td {
                     <span class="name">year</span>
                 </td>
                 <td>
-                  <span class="description">Hottest questions from year by accesses</span>
+                  <span class="description">Just pass the date like year-month-day</span>
                 </td>
               </tr>
             </tbody>
@@ -172,10 +172,10 @@ table th, table td {
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /v1/questions?params=week</pre>
+          <pre class="request route highlight">GET /v1/questions?by_month=2020-10-07+15%3A13%3A13+UTC</pre>
 
             <h4>Query Parameters</h4>
-            <pre class="request query_parameters highlight">params: week</pre>
+            <pre class="request query_parameters highlight">by_month: 2020-10-07 15:13:13 UTC</pre>
 
 
 
@@ -188,11 +188,11 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;4f53cda18c2baa0c0354bb5f9a3ecbe5&quot;
+ETag: W/&quot;9ff2753e0d94fec78f3de84a76764dd3&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 28eb9b13-2c23-4ee0-90d3-5957354fe599
-X-Runtime: 0.006888
-Content-Length: 2</pre>
+X-Request-Id: 501acbdd-946a-48c2-b2fe-ffe571f51a19
+X-Runtime: 0.011105
+Content-Length: 807</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
