@@ -3,7 +3,6 @@
 class Question < ApplicationRecord
   has_many :question_access
 
-  # TODO: turn this discipline a method
   scope :most_daily_accessed, -> { order(daily_access: :desc) }
 
   scope :most_accessed_by_periode, lambda { |from, to|

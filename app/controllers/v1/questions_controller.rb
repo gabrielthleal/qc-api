@@ -5,13 +5,13 @@ module V1
     def index
       @questions = questions_by_period.nil? ? questions : questions_by_period
 
-      render json: @questions
+      render json: @questions, serializer_each: QuestionSerializer
     end
 
     def disciplines
       @disciplines = Question.page(page).per(per_page).most_daily_accessed
 
-      render json: @disciplines.map(&:discipline).uniq
+      render json: @disciplines.map(&:discipline).uniq, serializer_each: QuestionSerializer
     end
 
     private
