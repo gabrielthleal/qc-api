@@ -7,5 +7,11 @@ module V1
 
       render json: @questions
     end
+
+    def disciplines
+      @disciplines = QuestionAccess.page(page).per(per_page).most_accessed_disciplines
+
+      render json: @disciplines
+    end
   end
 end
