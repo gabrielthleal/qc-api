@@ -6,9 +6,9 @@ resource 'Questions' do
   get '/v1/questions' do
     parameter :page, 'Question page', default: '1'
     parameter :per_page, 'Questions per page', default: '10'
-    parameter :week, 'Hottest questions from week by accesses'
-    parameter :month, 'Hottest questions from month by accesses'
-    parameter :year, 'Hottest questions from year by accesses'
+    parameter :by_week, 'Just pass the date like year-month-day'
+    parameter :by_month, 'Just pass the date like year-month-day'
+    parameter :by_year, 'Just pass the date like year-month-day'
 
     example 'Listing questions' do
       do_request
@@ -17,27 +17,44 @@ resource 'Questions' do
     end
 
     describe 'Question Filters' do
-      context 'when return the hottest questions from week by access' do
-        example '[GET] hottest questions from week - 200' do
-          do_request(params: :week)
+      before { create_list(:question, 3, :with_access) }
+
+      context 'when return the most accessed questions from a week' do
+        before { create_list(:question_access, 2, date: Time.current + 8.days) }
+
+        example '[GET] most accessed questions from a week - 200' do
+          do_request({ by_week: Time.current })
+
+          body = JSON(response_body)
 
           expect(status).to eq 200
+          expect(body.size).to eq 3
         end
       end
 
-      context 'when return the hottest questions from month by access' do
-        example '[GET] hottest questions from month - 200' do
-          do_request(params: :month)
+      context 'when return the most accessed questions from a month' do
+        before { create_list(:question_access, 2, date: Time.current + 32.days) }
+
+        example '[GET] most accessed questions from a month - 200' do
+          do_request({ by_month: Time.current })
+
+          body = JSON(response_body)
 
           expect(status).to eq 200
+          expect(body.size).to eq 3
         end
       end
 
-      context 'when return the hottest questions from year by access' do
-        example '[GET] hottest questions from year - 200' do
-          do_request(params: :year)
+      context 'when return the most accessed questions from a year' do
+        before { create_list(:question_access, 2, date: Time.current + 2.years) }
+
+        example '[GET] most accessed questions a from year - 200' do
+          do_request({ by_year: Time.current })
+
+          body = JSON(response_body)
 
           expect(status).to eq 200
+          expect(body.size).to eq 3
         end
       end
     end
@@ -61,7 +78,7 @@ resource 'Questions' do
           body = JSON(response_body)
 
           expect(status).to eq 200
-          
+
           expect(Question.second.discipline).to eq body.first
           expect(Question.first.discipline).to eq body.second
           expect(Question.third.discipline).to eq body.third
