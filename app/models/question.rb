@@ -20,15 +20,15 @@ class Question < ApplicationRecord
     end
 
     def most_accessed_by_month(date)
-      from = date.to_time.at_beginning_of_month
-      to = date.to_time.at_end_of_month
+      from = date.to_time
+      to = from.at_end_of_month
 
       most_accessed_by_periode(from, to)
     end
 
     def most_accessed_by_year(date)
-      from = date.to_time.at_beginning_of_year
-      to = date.to_time.at_end_of_year
+      from = date.to_time
+      to = from.at_end_of_year
 
       most_accessed_by_periode(from, to)
     end

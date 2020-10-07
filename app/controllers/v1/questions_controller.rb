@@ -19,9 +19,9 @@ module V1
     def questions_by_period
       return if params.nil?
 
-      return questions.most_accessed_by_year(params[:by_year]) if params[:by_year].present?
+      return questions.most_accessed_by_year("#{params[:by_year]}-01-01") if params[:by_year].present?
 
-      return questions.most_accessed_by_month(params[:by_month]) if params[:by_month].present?
+      return questions.most_accessed_by_month("#{params[:by_month]}-01") if params[:by_month].present?
 
       return questions.most_accessed_by_week(params[:by_week]) if params[:by_week].present?
     end
