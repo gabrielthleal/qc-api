@@ -6,6 +6,10 @@ Você vai ser responsável por modelar e desenvolver esse serviço utilizando as
 Disciplinas com questões mais quentes: Listar as disciplinas onde as questões foram as mais acessadas nas ultimas 24H
 Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/ano
 
+## Why an API?
+So, I've decided to work with a API project because in this way is possible to integrate with any front framework.
+I was capable to keep all my atention to the back-end development to improve its performance.
+
 ## Versions:
 * **Ruby**: 2.7.1
 * **Rails**: 6.0.3.3
