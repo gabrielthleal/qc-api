@@ -9,7 +9,7 @@ module V1
     end
 
     def disciplines
-      @disciplines = QuestionAccess.page(page).per(per_page).most_accessed_disciplines
+      @disciplines = Question.page(page).per(per_page).most_daily_accessed
 
       render json: @disciplines
     end
