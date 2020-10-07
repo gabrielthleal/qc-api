@@ -6,22 +6,25 @@ Você vai ser responsável por modelar e desenvolver esse serviço utilizando as
 Disciplinas com questões mais quentes: Listar as disciplinas onde as questões foram as mais acessadas nas ultimas 24H
 Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/ano
 
-## Versions:
+## Dependencies:
 * **Ruby**: 2.7.1
 * **Rails**: 6.0.3.3
-* **PostgreSQL**: 10.14
+* **Docker**:19.03.13
+* **docker-composer**:1.25.5
 
-## Project setup:
+## Project setup with docker:
 
 1. Install the dependencies above
 2. Clone this project: `$ git clone git@github.com:gabrielthleal/qc-api.git`
 3. Go into the project folder: `$ cd qc-api`
-4. Setup database: `$ bin/rails db:create && bin/rails db:migrate`
-5. Populate questions: `$ bin/rake populate:questions`
-6. Populate question_access (will take a some time): `$ bin/rake populate:question_access`
+4. Build the containers: `$ docker-compose build`
+5. Raise the containers: `$ docker-compose up`
+6. In another terminal setup database: `$ docker-compose run api rake db:create db:migrate`
+7. Populate questions: `$ docker-compose run api rake populate:questions`
+8. Populate question_access (Go, get some coffee, this will take some time): `$ docker-compose run api rake populate:question_access`
 
 ## Documentaion 
 
 ## Tests
-To run them just type: `$ bundle exec rspec`
+To run them just type: `$ docker-compose run api bundle exec rspec`
 
