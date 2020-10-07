@@ -65,6 +65,8 @@ resource 'Questions' do
         end
       end
     end
+
+    # TODO: handler errors
   end
 
   get '/v1/disciplines' do
@@ -93,4 +95,6 @@ resource 'Questions' do
       end
     end
   end
+  
+  # TODO: handler errors
 end

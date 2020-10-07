@@ -34,7 +34,7 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  \"Engineering 587\",\n  \"Education 470\",\n  \"Communications 514\"\n]",
+      "response_body": "[\n  \"Criminology 275\",\n  \"Forensic Science 126\",\n  \"Creative Arts 317\"\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -43,11 +43,11 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"14cae5e6ba37546525bc2010c82cbf88\"",
+        "ETag": "W/\"dc473de00e4f334b2c98b5b841cef636\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "61b93e90-f8b0-4155-be39-f5979f6663c4",
-        "X-Runtime": "0.008980",
-        "Content-Length": "56"
+        "X-Request-Id": "8f68b94d-6350-4bf7-8d53-ffaa8f0d895c",
+        "X-Runtime": "0.006956",
+        "Content-Length": "62"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
