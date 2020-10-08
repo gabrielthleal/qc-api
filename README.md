@@ -12,7 +12,7 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 * **Docker**:19.03.13
 * **docker-composer**:1.25.5
 
-## Project setup with docker:
+## Project setup:
 
 1. Install the dependencies above
 2. Clone this project: `$ git clone git@github.com:gabrielthleal/qc-api.git`
