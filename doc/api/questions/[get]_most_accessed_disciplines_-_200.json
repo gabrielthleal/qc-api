@@ -34,7 +34,7 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  \"Engineering 587\",\n  \"Education 470\",\n  \"Communications 514\"\n]",
+      "response_body": "[\n  \"Law 142\",\n  \"Psychology 595\",\n  \"Psychology 199\"\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -43,11 +43,11 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"14cae5e6ba37546525bc2010c82cbf88\"",
+        "ETag": "W/\"3428f8f3ed539d25901eadd9c4193310\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "61b93e90-f8b0-4155-be39-f5979f6663c4",
-        "X-Runtime": "0.008980",
-        "Content-Length": "56"
+        "X-Request-Id": "747bfc2e-c81d-4a29-a80a-c8414536cb78",
+        "X-Runtime": "0.010081",
+        "Content-Length": "45"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
