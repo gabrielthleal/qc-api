@@ -28,8 +28,8 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 6. Populate question_access (will take some time): `$ bin/rake populate:question_access`
 
 ## Project setup with docker
-
 steps 1, 2 and 3 from above.
+
 4. Build the containers: `$ docker-compose build`
 5. Boot the containers: `$ docker-compose up`
 6. In another terminal setup the database: `$ docker-compose run api rake db:create db:migrate`
