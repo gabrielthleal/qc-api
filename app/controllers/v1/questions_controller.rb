@@ -6,6 +6,10 @@ module V1
       @questions = questions_by_period.nil? ? questions : questions_by_period
 
       render json: @questions, serializer_each: QuestionSerializer
+
+    rescue ArgumentError
+      render json: { message: 'Invalid date! Please, use the year-month-day format (xxxx-xx-xx)' },
+             status: :bad_request
     end
 
     def disciplines

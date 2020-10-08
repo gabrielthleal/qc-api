@@ -23,7 +23,7 @@ resource 'Questions' do
       end
     end
 
-    describe 'Question Filters' do
+    describe 'most accessed by week' do
       before { create_list(:question, 3, :with_access) }
 
       context 'when return the most accessed questions from a week' do
@@ -39,6 +39,21 @@ resource 'Questions' do
         end
       end
 
+      context 'when wrong format date fail' do
+        example '[GET] fail week - 400' do
+          do_request({ by_year: '2020-50-500' })
+
+          expected_response = { message: 'Invalid date! Please, use the year-month-day format (xxxx-xx-xx)' }
+
+          expect(status).to eq 400
+          expect(response_body).to eq expected_response.to_json
+        end
+      end
+    end
+
+    describe 'most accessed by month' do
+      before { create_list(:question, 3, :with_access) }
+
       context 'when return the most accessed questions from a month' do
         before { create_list(:question_access, 2, date: '2020-10-07'.to_time + 32.days) }
 
@@ -52,6 +67,21 @@ resource 'Questions' do
         end
       end
 
+      context 'when wrong format date fail' do
+        example '[GET] fail month - 400' do
+          do_request({ by_month: '2020-50' })
+
+          expected_response = { message: 'Invalid date! Please, use the year-month-day format (xxxx-xx-xx)' }
+
+          expect(status).to eq 400
+          expect(response_body).to eq expected_response.to_json
+        end
+      end 
+    end
+
+    describe 'most accessed by year' do
+      before { create_list(:question, 3, :with_access) }
+
       context 'when return the most accessed questions from a year' do
         before { create_list(:question_access, 2, date: '2020-10-07'.to_time + 2.years) }
 
@@ -62,6 +92,17 @@ resource 'Questions' do
 
           expect(status).to eq 200
           expect(body.size).to eq 3
+        end
+      end
+
+      context 'when wrong format date fail' do
+        example '[GET] fail year - 400' do
+          do_request({ by_year: '2020-50' })
+
+          expected_response = { message: 'Invalid date! Please, use the year-month-day format (xxxx-xx-xx)' }
+
+          expect(status).to eq 400
+          expect(response_body).to eq expected_response.to_json
         end
       end
     end
