@@ -2,19 +2,31 @@
   "resource": "Questions",
   "resource_explanation": null,
   "http_method": "GET",
-  "route": "/v1/disciplines",
-  "description": "[GET] Most accessed disciplines - 200",
+  "route": "/v1/questions",
+  "description": "[GET] fail week - 400",
   "explanation": null,
   "parameters": [
     {
       "default": "1",
       "name": "page",
-      "description": "Discipline page"
+      "description": "Question page"
     },
     {
       "default": "10",
       "name": "per_page",
-      "description": "Disciplines per page"
+      "description": "Questions per page"
+    },
+    {
+      "name": "by_week",
+      "description": "Just pass the date (year-month-day) as number xxxx-xx-xx "
+    },
+    {
+      "name": "by_month",
+      "description": "Just pass the year and month (year-month) as number xxxx-xx"
+    },
+    {
+      "name": "by_year",
+      "description": "Just pass the year (year) as number xxxx"
     }
   ],
   "response_fields": [
@@ -23,18 +35,19 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/disciplines",
+      "request_path": "/v1/questions?by_year=2020-50-500",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
+        "by_year": "2020-50-500"
       },
       "request_content_type": null,
-      "response_status": 200,
-      "response_status_text": "OK",
-      "response_body": "[\n  \"Criminology 570\",\n  \"Business 481\",\n  \"Applied Science (Psychology) 365\"\n]",
+      "response_status": 400,
+      "response_status_text": "Bad Request",
+      "response_body": "{\n  \"message\": \"Invalid date! Please, use the year-month-day format (xxxx-xx-xx)\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -43,11 +56,10 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1b27e2eff5e4eafe2994d1b2cd8410d1\"",
-        "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ad7c39d5-e5c4-48fa-824c-55580d14c25d",
-        "X-Runtime": "0.008844",
-        "Content-Length": "69"
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "57e2644a-770d-4654-b686-3fde52e1221b",
+        "X-Runtime": "0.007592",
+        "Content-Length": "78"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
