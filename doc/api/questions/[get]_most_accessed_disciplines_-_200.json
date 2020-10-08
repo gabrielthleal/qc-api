@@ -34,7 +34,7 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  \"Criminology 275\",\n  \"Forensic Science 126\",\n  \"Creative Arts 317\"\n]",
+      "response_body": "[\n  \"Law 142\",\n  \"Psychology 595\",\n  \"Psychology 199\"\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -43,11 +43,11 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"dc473de00e4f334b2c98b5b841cef636\"",
+        "ETag": "W/\"3428f8f3ed539d25901eadd9c4193310\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8f68b94d-6350-4bf7-8d53-ffaa8f0d895c",
-        "X-Runtime": "0.006956",
-        "Content-Length": "62"
+        "X-Request-Id": "747bfc2e-c81d-4a29-a80a-c8414536cb78",
+        "X-Runtime": "0.010081",
+        "Content-Length": "45"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

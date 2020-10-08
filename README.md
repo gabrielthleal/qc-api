@@ -24,6 +24,9 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 8. Populate question_access (Go, get some coffee, this will take some time): `$ docker-compose run api rake populate:question_access`
 
 ## Documentaion 
+1. To generate the documentation run: `$ docker-compose run api rake docs:generate`
+2. Raise an server: `$ docker-compose up`
+2. You can check this doc out on: http://localhost:3000/api/docs
 
 ## Tests
 To run them just type: `$ docker-compose run api bundle exec rspec`
