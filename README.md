@@ -13,7 +13,7 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 
 ## Project setup:
 
-obs: If you want to try to boot this app with docker, just [click here](https://github.com/gabrielthleal/qc-api/tree/qc-api-with-docker) and follow the readme.
+obs: If you want to try to setup this app with docker, just [click here](https://github.com/gabrielthleal/qc-api/tree/qc-api-with-docker) and follow the readme.
 
 1. Install the dependencies above
 2. Clone this project: `$ git clone git@github.com:gabrielthleal/qc-api.git`
