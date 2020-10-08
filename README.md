@@ -1,4 +1,4 @@
-# QC API
+# QC API (Docker)
 
 ## Desafio
 Você vai ser responsável por modelar e desenvolver esse serviço utilizando as bibliotecas/frameworks que achar que mais convenientes para a solução. Tenha em mente de que temos mais de 300 mil clientes diários então escala é algo imprescindível por aqui. Para isso você deve ler os arquivos json neste repositório e baseado nos dados contidos criar os seguintes modelos de busca:
@@ -46,9 +46,8 @@ steps 1, 2 and 3 from above.
 2. Boot a server: `$ docker-compose run api bin/rails server`
 3. You can check this doc out on: http://localhost:3000/api/docs
 
-
 ## Tests
-To run them just type: `$ bundle exec rspec`
+To run them just type: `$ docker-compose run api bundle exec rspec`
 
 ## Tests (docker)
 To run them just type: `$ docker-compose run api bundle exec rspec`
