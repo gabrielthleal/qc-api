@@ -9,7 +9,8 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 
 ## How do I use this API?
   All endpoints are documented. You'll setup the project below in any way you choose, then generate the documentation.
-  You can access it from you browser: http://localhost:3000/api/docs.
+  You can access it from your browser: http://localhost:3000/api/docs.
+  After that you can test the endpoints with any tool to test APIs REST you want.
 
 ## Versions:
 * **Ruby**: 2.7.1
@@ -47,7 +48,7 @@ steps 1, 2 and 3 from above.
 3. You can check this doc out on: http://localhost:3000/api/docs
 
 ## Tests
-To run them just type: `$ docker-compose run api bundle exec rspec`
+To run them just type: `$ bundle exec rspec`
 
 ## Tests (docker)
 To run them just type: `$ docker-compose run api bundle exec rspec`
