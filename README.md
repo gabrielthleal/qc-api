@@ -16,6 +16,9 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 * **Ruby**: 2.7.1
 * **Rails**: 6.0.3.3
 * **PostgreSQL**: 10.14
+
+if you choose the setup with docker 
+
 * **Docker**: 19.03.13
 * **docker-compose**: 1.25.5
 
